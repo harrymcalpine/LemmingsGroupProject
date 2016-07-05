@@ -148,10 +148,6 @@ Game::Game(ID3D11Device* _pd3dDevice, HWND _hWnd, HINSTANCE _hInstance) :m_playT
 #pragma endregion
 
 #pragma region LogoScreen
-	//Game objects for the Logo Screen
-	//
-	//Play Button
-	//Exit Game button
 
 	ImageGO2D* LogoState = new ImageGO2D("lemmings_logo", _pd3dDevice, ANIMATION_PASS);
 	LogoState->SetPos(Vector2(400, 100));
@@ -161,26 +157,13 @@ Game::Game(ID3D11Device* _pd3dDevice, HWND _hWnd, HINSTANCE _hInstance) :m_playT
 	TeamLogo->SetPos(Vector2(400, 350));
 	m_GameObjectLogo.push_back(TeamLogo);
 
-	//Boundingbox* logoButton1 = new Boundingbox("Play Game Button", _pd3dDevice, ANIMATION_PASS, Vector2(150, 365), Vector2(390, 415), "Option Button 1", 10);//Button1,
-	//logoButton1->SetPos(Vector2(275, 375));
-	//m_GameObjectLogo.push_back(logoButton1);
-
-	//Boundingbox* logoButton2 = new Boundingbox("Exit Game Button", _pd3dDevice, ANIMATION_PASS, Vector2(370, 520), Vector2(275, 475), "Option Button 2", 11);//Button1,
-	//logoButton2->SetPos(Vector2(575, 375));
-	//m_GameObjectLogo.push_back(logoButton2);
-
 	ImageGO2D* Background = new ImageGO2D("Soil-Background", _pd3dDevice, ANIMATION_PASS);
 	Background->SetPos(Vector2(0, 0));
 	m_GameObjectLogo.push_front(Background);
 
-
 #pragma endregion
 
 #pragma region Options
-	//Game objects for the options screen
-	//
-	//Play Button
-	//Exit Game button
 
 	ImageGO2D* optionsState = new ImageGO2D("lemmings_logo", _pd3dDevice, ANIMATION_PASS);
 	optionsState->SetPos(Vector2(400, 100));
@@ -189,14 +172,6 @@ Game::Game(ID3D11Device* _pd3dDevice, HWND _hWnd, HINSTANCE _hInstance) :m_playT
 	ImageGO2D* TeamLogo2 = new ImageGO2D("Team Logo", _pd3dDevice, ANIMATION_PASS);
 	TeamLogo2->SetPos(Vector2(400, 350));
 	m_GameObjectOptions.push_back(TeamLogo2);
-
-	//Boundingbox* OptionButton1 = new Boundingbox("Play Game Button", _pd3dDevice, ANIMATION_PASS, Vector2(150, 365), Vector2(390, 415), "Option Button 1", 10);//Button1,
-	//OptionButton1->SetPos(Vector2(275, 375));
-	//m_GameObjectOptions.push_back(OptionButton1);
-
-	//Boundingbox* OptionButton2 = new Boundingbox("Exit Game Button", _pd3dDevice, ANIMATION_PASS, Vector2(370, 520), Vector2(275, 475), "Option Button 2", 11);//Button1,
-	//OptionButton2->SetPos(Vector2(575, 375));
-	//m_GameObjectOptions.push_back(OptionButton2);
 
 	ImageGO2D* Background2 = new ImageGO2D("Soil-Background", _pd3dDevice, ANIMATION_PASS);
 	Background2->SetPos(Vector2(0, 0));
@@ -210,7 +185,6 @@ Game::Game(ID3D11Device* _pd3dDevice, HWND _hWnd, HINSTANCE _hInstance) :m_playT
 	TeamLogo3->SetPos(Vector2(400, 350));
 	m_GameObjectOptions.push_back(TeamLogo3);
 
-	
 	ImageGO2D* Background3 = new ImageGO2D("Soil-Background", _pd3dDevice, ANIMATION_PASS);
 	Background3->SetPos(Vector2(0, 0));
 	m_GameObjectOptions.push_front(Background3);
@@ -302,10 +276,9 @@ bool Game::Update()
 			m_GD->m_GS = GS_OPTIONS;
 			idleTimer = 30.0f;
 		}
-		
 	}
 
-	if ((m_GD->m_lemmingsKilled + m_GD->m_lemmingsSaved ) == 20)
+	if ((m_GD->m_lemmingsKilled + m_GD->m_lemmingsSaved) == 20)
 	{
 		m_GD->m_GS = GS_GAME_OVER;
 		idleTimer = 30.0f;
@@ -326,7 +299,6 @@ bool Game::Update()
 			m_GD->m_GS = GS_OPTIONS;
 			idleTimer = 30.0f;
 		}
-
 	}
 
 	if (m_GD->m_GS == GS_OPTIONS)
@@ -352,19 +324,6 @@ bool Game::Update()
 	GetWindowRect(m_hWnd, &window);
 
 	//	SetCursorPos((window.left + window.right) >> 1, (window.bottom + window.top) >> 1);
-
-	//	//upon space bar switch camera state
-	//if ((m_keyboardState[DIK_SPACE] & 0x80) && !(m_prevKeyboardState[DIK_SPACE] & 0x80))
-	//{
-	//	if (m_GD->m_GS == GS_ATTRACT)
-	//	{
-	//		m_GD->m_GS = GS_PLAY_TPS_CAM;
-	//	}
-	//	else
-	//	{
-	//		m_GD->m_GS = GS_ATTRACT;
-	//	}
-	//}
 
 	if (m_GD->m_GS == GS_LOGO)
 	{
@@ -575,6 +534,7 @@ void Game::Render(ID3D11DeviceContext* _pd3dImmediateContext)
 		for (list<GameObject2D *>::iterator it = m_GameObject2DsScreen.begin(); it != m_GameObject2DsScreen.end(); it++)
 		{
 			(*it)->Draw(m_DD2D);
+			m_DD2D->m_Font->DrawString(m_DD2D->m_Sprites.get(), Helper::charToWChar("To exit press ESC then Enter"), Vector2(100, 100), Colors::Yellow);
 		}
 		m_DD2D->m_Sprites->End();
 	}
