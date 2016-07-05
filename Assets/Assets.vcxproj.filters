@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Models">
+      <UniqueIdentifier>{c30852cb-5bae-4314-9cfd-444f8d5b7b7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File VBGOs">
+      <UniqueIdentifier>{efbd3b22-dc07-4b8b-86eb-09dc8c46b7e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{0c01afb0-8a36-4aad-bf34-0bf53ac174f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{bf1a90b0-583e-432a-b6d3-acf4d3f3acab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="BirdModelV1.fbx">
+      <Filter>Models</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="JEMINA vase -up.fbx">
+      <Filter>Models</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="table.FBX">
+      <Filter>Models</Filter>
+    </MeshContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="white.jpg">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="logo_small.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="grass.jpg">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Lemming.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Spawner.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Cursor.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="LemmingDDS.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="SpawnerDDS.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="lemmings_logo.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="ButtonDemo.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Level1.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Exit.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Background.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Brick.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Explosion.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Tunnel.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="lemingHud2.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="ButtonAdd.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Play.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Select.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Soil-Background.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Play Game Button.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Exit Game Button.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button1.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button2.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button3.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button4.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button5.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button6.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button7.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button8.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Button9.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="LemSelectBox.png">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Team Logo.dds">
+      <Filter>Textures</Filter>
+    </ImageContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="terrainTex.txt">
+      <Filter>File VBGOs</Filter>
+    </Text>
+    <Text Include="cube.txt">
+      <Filter>File VBGOs</Filter>
+    </Text>
+    <Text Include="baseline.txt">
+      <Filter>File VBGOs</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader.fx">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
